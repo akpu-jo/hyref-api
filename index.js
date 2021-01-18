@@ -4,8 +4,6 @@ const ejs = require("ejs");
 const mongoose = require('mongoose');
 const http = require('http');
 
-const port = process.env.PORT || 3000
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -39,7 +37,7 @@ app.get("/providers", function(req, res){
     });
 });
 
-app.listen(port,() => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server running at port `+port);
   });
 
