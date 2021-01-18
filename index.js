@@ -37,8 +37,8 @@ app.get("/providers", function(req, res){
     });
 });
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server running at port `+port);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Server running at port 3000");
   });
 
 
